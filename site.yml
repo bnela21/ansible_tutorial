@@ -2,15 +2,180 @@
  
  - hosts: all
    become: true
-   tasks:
+   pre_tasks:
  
-   - name: update repository index
-     apt:
+  - name: install updates (CentOS)
+     tags: always
+     dnf:
+       update_only: yes
+       update_cache: yes
+     when: ansible_distribution == "CentOS"
  
-   - name: install apache2 package
+  - name: install updates (Ubuntu)
+     tags: always
      apt:
-     name: apache2
+       upgrade: dist
+       update_cache: yes
+     when: ansible_distribution == "Ubuntu"
  
-   - name: add php support for apache
-     apt:
-       name: libapache2-mod-php
+ - ho
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
