@@ -1,0 +1,7 @@
+dn: ou=people,dc=1cyber,dc=de
+objectClass: organizationalUnit
+ou: people
+
+dn: ou=groups,dc=1cyber,dc=de
+objectClass: organizationalUnit
+ou: groups
